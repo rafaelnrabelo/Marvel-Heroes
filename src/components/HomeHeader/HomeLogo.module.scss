@@ -1,0 +1,17 @@
+.logo_container {
+  display: block;
+  width: 326px;
+  height: auto;
+}
+
+@media screen and (max-width: 430px) {
+  .logo_container {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .logo_container {
+    width: 200px;
+  }
+}
