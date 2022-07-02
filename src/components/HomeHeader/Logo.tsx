@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import styles from "./HomeLogo.module.scss";
+import styles from "../../styles/HomeLogo.module.scss";
 
 const HomeLogo: React.FC = () => {
   return (

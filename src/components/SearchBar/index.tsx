@@ -1,17 +1,28 @@
 import Image from "next/image";
-import { useRef } from "react";
+import { ChangeEvent, useRef } from "react";
 
-import styles from "./SearchBar.module.scss";
+import { useHeroes } from "../../contexts/HeroesContext";
+import styles from "../../styles/SearchBar.module.scss";
 
 const SearchBar: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const timeout = useRef<NodeJS.Timeout>();
+  const { getHeroes } = useHeroes();
+
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
+    clearTimeout(timeout.current);
+    timeout.current = setTimeout(async () => {
+      const search = event.target.value;
+      getHeroes(search);
+    }, 350);
+  };
 
   return (
     <div className={styles.container} onClick={() => inputRef.current?.focus()}>
       <Image
         src="/assets/ic_busca.svg"
-        width={29}
-        height={29}
+        width={22}
+        height={22}
         objectFit="contain"
       />
       <input
@@ -19,6 +30,7 @@ const SearchBar: React.FC = () => {
         placeholder="Procure por heróis"
         className={styles.search_input}
         ref={inputRef}
+        onChange={handleSearch}
       />
     </div>
   );

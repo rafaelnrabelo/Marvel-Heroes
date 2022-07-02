@@ -3,16 +3,21 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   
   span {
     font-size: 18px;
-    color: #999;
+    color: #b9b9b9;
+    font-weight: 500;
   }
 
   @media screen and (max-width: 690px) {
     justify-content: center;
     flex-direction: column;
+
+    span {
+      font-size: 16px;
+    }
 
     .filters_container {
       margin-top: 15px;
@@ -26,7 +31,11 @@
 
   span {
     font-size: 14px;
-    color: var(--primary);
+    color: rgba(255, 21, 16, 0.6);
+
+    @media screen and (max-width: 480px) {
+      font-size: 12px;
+    }
   }
 }
 

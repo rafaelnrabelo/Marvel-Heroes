@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import HeroesList from "../components/HeroesList";
 
+import styles from "../styles/Home.module.scss";
+import HeroesList from "../components/HeroesList";
 import HomeHeader from "../components/HomeHeader";
 
 const Home: NextPage = () => {
@@ -11,7 +12,7 @@ const Home: NextPage = () => {
         <title>Home | Marvel</title>
       </Head>
 
-      <main>
+      <main className={styles.page_container}>
         <HomeHeader />
         <HeroesList />
       </main>

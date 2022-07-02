@@ -1,0 +1,45 @@
+.toggle_container {
+  border: none;
+  cursor: pointer;
+  background-color: #e4e5e9;
+  width: 75px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.toggle_container:hover {
+  background-color: #dcdee2;
+
+  .toggle_circle {
+    box-shadow: 0 4px 10px var(--primary);
+  }
+}
+
+.toggle_circle {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  box-shadow: 0 4px 6px rgb(255 21 16 / 60%);
+  transition: box-shadow 0.2s, margin 0.3s ease;
+}
+
+.toggle_circle_checked {
+  margin-left: 34px;
+}
+
+@media screen and (max-width: 430px) {
+  .toggle_container {
+    width: 60px;
+    height: 34px;
+    border-radius: 17px;
+  }
+
+  .toggle_circle_checked {
+    margin-left: 19px;
+  }
+}

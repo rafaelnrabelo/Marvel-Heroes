@@ -1,12 +1,18 @@
 import Image from "next/image";
 import Toggle from "../Toggle";
 
-import styles from "./ListHeader.module.scss";
+import styles from "../../styles/ListHeader.module.scss";
+import { useHeroes } from "../../contexts/HeroesContext";
 
 const HeroesList: React.FC = () => {
+  const { toggleOnlyFavorites, showOnlyFavorites, favoriteHeroes, total } =
+    useHeroes();
+
   return (
     <div className={styles.container}>
-      <span>Encontrados 20 heróis</span>
+      <span>
+        Encontrados {showOnlyFavorites ? favoriteHeroes.length : total} heróis
+      </span>
       <div className={styles.filters_container}>
         <div className={styles.order_by}>
           <Image
@@ -17,7 +23,11 @@ const HeroesList: React.FC = () => {
           />
           <span>Ordenar por nome - A/Z</span>
         </div>
-        <Toggle style={{ margin: "0 20px" }} />
+        <Toggle
+          style={{ margin: "0 15px" }}
+          onChange={toggleOnlyFavorites}
+          checked={showOnlyFavorites}
+        />
         <div className={styles.only_fav}>
           <Image
             src="/assets/favorito_01.svg"

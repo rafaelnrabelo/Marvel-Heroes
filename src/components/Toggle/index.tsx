@@ -1,20 +1,16 @@
-import { useState } from "react";
-import styles from "./Toggle.module.scss";
+import { useEffect, useState } from "react";
+import styles from "../../styles/Toggle.module.scss";
 
 interface ToggleProps {
-  onChange?: (value: boolean) => void;
+  onChange: (value: boolean) => void;
+  checked: boolean;
   style?: React.CSSProperties;
 }
 
-const Toggle: React.FC<ToggleProps> = ({ onChange, style }) => {
-  const [isChecked, setIsChecked] = useState(false);
-
+const Toggle: React.FC<ToggleProps> = ({ onChange, checked, style }) => {
   const handleToggle = () => {
-    const newValue = !isChecked;
-    setIsChecked(newValue);
-    if (onChange) {
-      onChange(newValue);
-    }
+    const newValue = !checked;
+    onChange(newValue);
   };
 
   return (
@@ -24,8 +20,11 @@ const Toggle: React.FC<ToggleProps> = ({ onChange, style }) => {
       style={style}
     >
       <span
-        className={styles.toggle_circle}
-        style={{ marginLeft: isChecked ? "34px" : 0 }}
+        className={
+          checked
+            ? `${styles.toggle_circle} ${styles.toggle_circle_checked}`
+            : styles.toggle_circle
+        }
       />
     </button>
   );
