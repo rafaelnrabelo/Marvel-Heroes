@@ -1,7 +1,19 @@
 import styles from "../../styles/Loading.module.scss";
 
-const Loading: React.FC = () => {
-  return <div className={styles.loading} />;
+interface LoadingProps {
+  size: "small" | "large";
+}
+
+const Loading: React.FC<LoadingProps> = ({ size }) => {
+  return (
+    <div
+      className={
+        size === "small"
+          ? `${styles.small} ${styles.loading}`
+          : `${styles.large} ${styles.loading}`
+      }
+    />
+  );
 };
 
 export default Loading;

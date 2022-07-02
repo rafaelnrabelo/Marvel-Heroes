@@ -7,32 +7,64 @@ import { useEffect } from "react";
 import { useHeroes } from "../../contexts/HeroesContext";
 
 const HeroesList: React.FC = () => {
-  const { heroes, getHeroes, loading, showOnlyFavorites, favoriteHeroes } =
-    useHeroes();
+  const {
+    heroes,
+    getHeroes,
+    loading,
+    showOnlyFavorites,
+    favoriteHeroes,
+    total,
+    offset,
+  } = useHeroes();
 
   useEffect(() => {
-    getHeroes();
+    if (heroes.length === 0) {
+      getHeroes();
+    }
   }, []);
 
   return (
     <div className={styles.container}>
       <div className={styles.content}>
         <ListHeader />
-        {loading && !showOnlyFavorites ? (
+        {loading && !showOnlyFavorites && !offset ? (
           <div className={styles.loading_container}>
-            <Loading />
+            <Loading size="large" />
           </div>
         ) : (
-          <div className={styles.grid}>
-            {(showOnlyFavorites ? favoriteHeroes : heroes).map((hero) => (
-              <HeroCard
-                key={hero.id}
-                id={hero.id}
-                name={hero.name}
-                image={`${hero.thumbnail.path}/standard_fantastic.${hero.thumbnail.extension}`}
-              />
-            ))}
-          </div>
+          <>
+            <div className={styles.grid}>
+              {(showOnlyFavorites ? favoriteHeroes : heroes).map((hero) => (
+                <HeroCard
+                  key={hero.id}
+                  id={hero.id}
+                  name={hero.name}
+                  image={`${hero.thumbnail.path}/standard_fantastic.${hero.thumbnail.extension}`}
+                />
+              ))}
+            </div>
+            {!showOnlyFavorites && total !== heroes.length && (
+              <div className={styles.load_more_container}>
+                <button
+                  className={styles.load_more}
+                  onClick={() => getHeroes({ loadMore: true })}
+                  disabled={loading}
+                  style={
+                    loading
+                      ? { borderTopRightRadius: 0, borderBottomRightRadius: 0 }
+                      : {}
+                  }
+                >
+                  Carregar mais
+                </button>
+                {loading && (
+                  <div className={styles.load_more_loading}>
+                    <Loading size="small" />
+                  </div>
+                )}
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>

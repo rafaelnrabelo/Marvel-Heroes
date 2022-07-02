@@ -7,13 +7,15 @@ import styles from "../../styles/SearchBar.module.scss";
 const SearchBar: React.FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const timeout = useRef<NodeJS.Timeout>();
-  const { getHeroes } = useHeroes();
+  const { changeSearch } = useHeroes();
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     clearTimeout(timeout.current);
+
     timeout.current = setTimeout(async () => {
-      const search = event.target.value;
-      getHeroes(search);
+      const newSearch = event.target.value;
+
+      changeSearch(newSearch);
     }, 350);
   };
 
