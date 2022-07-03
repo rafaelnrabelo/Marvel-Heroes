@@ -1,7 +1,6 @@
-import styles from "../../styles/HeroCard.module.scss";
-import Image from "next/image";
 import Link from "next/link";
-import { useHeroes } from "../../contexts/HeroesContext";
+import styles from "../../styles/HeroCard.module.scss";
+import FavoriteButton from "../FavoriteButton";
 
 interface HeroCardProps {
   id: number;
@@ -10,9 +9,6 @@ interface HeroCardProps {
 }
 
 const HeroCard: React.FC<HeroCardProps> = ({ id, name, image }) => {
-  const { isFavorite, toggleFavoriteHero } = useHeroes();
-  const favorite = isFavorite(id);
-
   return (
     <div className={styles.container}>
       <Link href={`/hero/${id}`}>
@@ -24,15 +20,7 @@ const HeroCard: React.FC<HeroCardProps> = ({ id, name, image }) => {
         <Link href={`/hero/${id}`}>
           <p>{name}</p>
         </Link>
-        <button onClick={() => toggleFavoriteHero(id)}>
-          <img
-            src={
-              favorite ? "/assets/favorito_01.svg" : "/assets/favorito_02.svg"
-            }
-            width={20}
-            height={20}
-          />
-        </button>
+        <FavoriteButton id={id} />
       </div>
     </div>
   );
