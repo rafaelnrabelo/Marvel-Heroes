@@ -23,3 +23,9 @@ input {
 * {
   box-sizing: border-box;
 }
+
+.page_container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100% - 50px);
+}
