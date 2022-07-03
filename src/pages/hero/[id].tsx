@@ -57,7 +57,7 @@ const Hero: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Hero | Marvel</title>
+        <title>{hero?.name || "Hero"} | Marvel</title>
       </Head>
 
       <main

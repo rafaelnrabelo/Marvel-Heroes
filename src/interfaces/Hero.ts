@@ -5,7 +5,13 @@ export interface Hero {
   thumbnail: {
     path: string;
     extension: string;
-  }
+  };
+  comics: {
+    available: number;
+  };
+  events: {
+    available: number;
+  };
 };
 
 export interface HeroResponse {

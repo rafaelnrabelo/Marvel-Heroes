@@ -11,7 +11,7 @@
 .left_column {
   width: 40%;
   
-  p {
+  .description {
     width: 100%;
     color: #888;
     font-size: 18px;
@@ -40,6 +40,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  img {
+    object-fit: contain;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -48,7 +52,7 @@
   }
 
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
@@ -57,6 +61,18 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .right_column {
+    width: 100%;
+
+    img {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+
 
 @media screen and (max-width: 660px) {
   .container {
@@ -86,11 +102,71 @@
   text-transform: uppercase;
   font-weight: bold;
   text-align: end;
+  white-space: nowrap;
   overflow: hidden;
 }
 
 @media screen and (min-width: 1500px) {
   .background_name {
     font-size: 170px;
+  }
+}
+
+.numbers_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  div + div {
+    margin-left: 100px;
+  }
+
+  p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+  
+  span {
+    color: #333;
+    margin-left: 15px;
+    font-size: 18px;
+  }
+}
+
+.rating_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 15px;
+  }
+}
+
+.date_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    margin-right: 15px;
+  }
+
+  span {
+    color: #333;
   }
 }
