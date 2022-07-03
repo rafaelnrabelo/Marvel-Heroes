@@ -1,5 +1,5 @@
 import { useHeroes } from "../../contexts/HeroesContext";
-import styles from "../../styles/FavoriteButton.module.scss";
+import styles from "./FavoriteButton.module.scss";
 
 interface FavoriteButtonProps {
   id?: number;

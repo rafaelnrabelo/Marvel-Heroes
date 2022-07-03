@@ -1,5 +1,5 @@
 import HeroCard from "./HeroCard";
-import styles from "../../styles/HeroesList.module.scss";
+import styles from "./HeroesList.module.scss";
 
 import ListHeader from "./ListHeader";
 import Loading from "../Loading";

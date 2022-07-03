@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../../styles/Toggle.module.scss";
+import styles from "./Toggle.module.scss";
 
 interface ToggleProps {
   onChange: (value: boolean) => void;

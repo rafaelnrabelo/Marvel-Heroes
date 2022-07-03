@@ -1,4 +1,4 @@
-import styles from "../../styles/Loading.module.scss";
+import styles from "./Loading.module.scss";
 
 interface LoadingProps {
   size: "small" | "large";

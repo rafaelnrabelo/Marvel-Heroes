@@ -1,4 +1,4 @@
-import styles from "../../styles/ComicCard.module.scss";
+import styles from "./ComicCard.module.scss";
 
 interface HeroCardProps {
   title: string;

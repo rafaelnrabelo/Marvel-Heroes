@@ -1,4 +1,4 @@
-import styles from "../../styles/Snackbar.module.scss";
+import styles from "./Snackbar.module.scss";
 
 interface SnackbarProps {
   message: string;

@@ -7,7 +7,6 @@ import { api } from "../../services/api";
 import { useSnackbar } from "../../contexts/SnackbarContext";
 import { Hero, HeroResponse } from "../../interfaces/Hero";
 
-import styles from "../../styles/Hero.module.scss";
 import HeroHeader from "../../components/HeroHeader";
 import HeroInfo from "../../components/HeroInfo";
 import { HeroComics, HeroComicsResponse } from "../../interfaces/Comics";

@@ -1,4 +1,4 @@
-import styles from "../../styles/HomeHeader.module.scss";
+import styles from "./HomeHeader.module.scss";
 
 import HomeLogo from "./Logo";
 import SearchBar from "../SearchBar";

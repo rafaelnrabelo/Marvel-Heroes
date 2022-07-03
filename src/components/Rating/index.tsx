@@ -1,4 +1,4 @@
-import styles from "../../styles/Rating.module.scss";
+import styles from "./Rating.module.scss";
 
 interface RatingProps {
   starsNumber: 0 | 1 | 2 | 3 | 4 | 5;

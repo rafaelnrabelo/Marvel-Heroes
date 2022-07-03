@@ -1,4 +1,4 @@
-import styles from "../../styles/HeroHeader.module.scss";
+import styles from "./HeroHeader.module.scss";
 
 import HeroLogo from "./Logo";
 import SearchBar from "../SearchBar";

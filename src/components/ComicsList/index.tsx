@@ -1,5 +1,5 @@
 import ComicCard from "./ComicCard";
-import styles from "../../styles/ComicsList.module.scss";
+import styles from "./ComicsList.module.scss";
 import { HeroComics } from "../../interfaces/Comics";
 
 interface ComicsListProps {

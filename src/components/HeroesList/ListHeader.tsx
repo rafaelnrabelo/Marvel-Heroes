@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Toggle from "../Toggle";
 
-import styles from "../../styles/ListHeader.module.scss";
+import styles from "./ListHeader.module.scss";
 import { useHeroes } from "../../contexts/HeroesContext";
 
 const HeroesList: React.FC = () => {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../styles/HeroCard.module.scss";
+import styles from "./HeroCard.module.scss";
 import FavoriteButton from "../FavoriteButton";
 
 interface HeroCardProps {

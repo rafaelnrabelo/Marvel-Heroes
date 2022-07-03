@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Hero } from "../../interfaces/Hero";
-import styles from "../../styles/HeroInfo.module.scss";
+import styles from "./HeroInfo.module.scss";
 import FavoriteButton from "../FavoriteButton";
 import Rating from "../Rating";
 

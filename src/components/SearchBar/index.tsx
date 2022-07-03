@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ChangeEvent, useRef } from "react";
 
 import { useHeroes } from "../../contexts/HeroesContext";
-import styles from "../../styles/SearchBar.module.scss";
+import styles from "./SearchBar.module.scss";
 
 interface SearchBarProps {
   heroHeader?: boolean;
