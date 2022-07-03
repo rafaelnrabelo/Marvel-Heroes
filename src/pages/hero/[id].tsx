@@ -80,7 +80,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       `characters/${id}/comics`,
       {
         params: {
-          orderBy: "-focDate",
+          orderBy: "-onsaleDate",
           limit: 10,
         },
       }
@@ -121,7 +121,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     let lastComicDate = hero.modified;
     if (comics.length > 0 && comics[0]?.dates.length > 0) {
       const dateObject =
-        comics[0].dates.find((d) => d.type === "focDate") || comics[0].dates[0];
+        comics[0].dates.find((d) => d.type === "onsaleDate") ||
+        comics[0].dates[0];
       lastComicDate = dateObject?.date;
     }
 
