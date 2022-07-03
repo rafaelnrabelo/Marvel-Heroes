@@ -28,6 +28,7 @@ interface HeroesContextProps {
   heroes: Hero[];
   total: number;
   offset: number;
+  search: string;
   changeSearch: (search: string) => void;
   getHeroes: (params?: GetHeroesParams) => void;
   favoriteHeroes: Hero[];
@@ -148,6 +149,7 @@ export function HeroesProvider({ children }: HeroesProviderProps) {
         loading,
         heroes,
         total,
+        search,
         offset,
         changeSearch,
         getHeroes,
