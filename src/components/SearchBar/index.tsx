@@ -4,10 +4,14 @@ import { ChangeEvent, useRef } from "react";
 import { useHeroes } from "../../contexts/HeroesContext";
 import styles from "../../styles/SearchBar.module.scss";
 
-const SearchBar: React.FC = () => {
+interface SearchBarProps {
+  heroHeader?: boolean;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ heroHeader }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const timeout = useRef<NodeJS.Timeout>();
-  const { changeSearch } = useHeroes();
+  const { changeSearch, search } = useHeroes();
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement>) => {
     clearTimeout(timeout.current);
@@ -20,7 +24,14 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <div className={styles.container} onClick={() => inputRef.current?.focus()}>
+    <div
+      className={
+        heroHeader
+          ? `${styles.container} ${styles.hero_container}`
+          : styles.container
+      }
+      onClick={() => inputRef.current?.focus()}
+    >
       <Image
         src="/assets/ic_busca.svg"
         width={22}
@@ -32,6 +43,7 @@ const SearchBar: React.FC = () => {
         placeholder="Procure por heróis"
         className={styles.search_input}
         ref={inputRef}
+        defaultValue={search}
         onChange={handleSearch}
       />
     </div>

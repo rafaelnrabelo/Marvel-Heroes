@@ -10,6 +10,44 @@
   cursor: text;
 }
 
+.hero_container {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  background-color: #fff;
+  width: 40%;
+  max-width: 750px;
+  height: 45px;
+
+  .search_input {
+    color: #666;
+    padding-left: 20px;
+    width: calc(100% - 39px);
+    font-size: 16px;
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .hero_container {
+    width: fit-content;
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .hero_container {
+    width: fit-content;
+    margin-right: auto;
+    top: 102px;
+  }
+}
+
 .search_input {
   padding-left: 40px;
   padding-right: 20px;
