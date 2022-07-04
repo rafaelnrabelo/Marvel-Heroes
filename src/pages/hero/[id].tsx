@@ -24,7 +24,7 @@ const Hero: NextPage<HeroProps> = ({ hero, comics, lastComicDate }) => {
 
   useEffect(() => {
     getHeroBackground();
-  }, []);
+  }, [hero]);
 
   const getHeroBackground = async () => {
     try {
