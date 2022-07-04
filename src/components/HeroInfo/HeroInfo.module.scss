@@ -9,6 +9,8 @@
 }
 
 .left_column {
+  display: flex;
+  flex-direction: column;
   width: 40%;
   
   .description {
@@ -116,6 +118,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  margin-top: auto;
 
   div + div {
     margin-left: 100px;
