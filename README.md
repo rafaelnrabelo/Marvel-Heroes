@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <img src="https://user-images.githubusercontent.com/55251721/177159310-ef9f493f-5d35-441b-8ed0-0c66e0479d22.png" width=250 />
+</h1>
 
-## Getting Started
+<h2 align="center">
+  Encontre seus heróis favoritos da Marvel! <br/> <br/>
+  <a href="https://github.com/rafaelnrabelo/Marvel-Heroes#testando">
+    <img src="https://img.shields.io/badge/Testing-Install-%23ff1510" alt="testing"/>
+  </a>
+  <a href="https://marvel-search-heroes.vercel.app/">
+    <img src="https://img.shields.io/badge/Testing-Deployed-%23ff1510" alt="deployed"/>
+  </a>
+</h2>
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![marvel-heroes](https://user-images.githubusercontent.com/55251721/177159913-2de6573e-a6d9-49c8-9e60-5b929a92fcd8.png)
+   
+#### Tecnologias
+  - ReactJS
+  - NextJS
+  - TypeScript
+  - Axios
+  - SASS
+  - RGBaster
+  
+#### Features
+  - Layout responsivo
+  - Listagem de heróis com paginação
+  - Favoritar até 5 heróis
+  - Persistência dos favoritos
+  - Filtro de heróis pelo nome nas páginas principal e de detalhe
+  - Filtro para apenas heróis favoritos
+  - Página de detalhe do herói
+  - Listagem dos últimos quadrinhos do herói
+  
+   
+## Testando:
+   1. Clone o repositorio usando `git clone https://github.com/rafaelnrabelo/Marvel-Heroes.git`
+   2. Mova para a pasta clonada usando `cd Marvel-Heroes`
+   3. Instale todas dependecias usando `npm install`
+   4. Crie um arquivo `.env` usando de base o arquivo `.env.example`, preenchendo com as chaves da API da Marvel
+   5. Execute `npm run dev` para iniciar a aplicação.
+   6. Agora é só testar a aplicação na url `localhost:3000`
