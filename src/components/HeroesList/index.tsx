@@ -13,12 +13,13 @@ const HeroesList: React.FC = () => {
     loading,
     showOnlyFavorites,
     favoriteHeroes,
+    search,
     total,
     offset,
   } = useHeroes();
 
   useEffect(() => {
-    if (heroes.length === 0) {
+    if (heroes.length === 0 && !loading && !search) {
       getHeroes();
     }
   }, []);

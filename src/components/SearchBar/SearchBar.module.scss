@@ -20,6 +20,7 @@
   width: 40%;
   max-width: 750px;
   height: 45px;
+  z-index: 11;
 
   .search_input {
     color: #666;
@@ -35,16 +36,29 @@
 
 @media screen and (max-width: 830px) {
   .hero_container {
-    width: fit-content;
+    width: 325px;
     margin-right: 40px;
   }
 }
 
 @media screen and (max-width: 660px) {
   .hero_container {
-    width: fit-content;
+    width: 325px;
     margin-right: auto;
     top: 102px;
+    height: 55px;
+
+    .search_input {
+      padding-left: 20px;
+      width: calc(100% - 49px);
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .hero_container {
+    width: 280px;
   }
 }
 
