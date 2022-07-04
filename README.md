@@ -23,6 +23,7 @@
   - RGBaster
   
 #### Features
+  - Static Site Generation
   - Layout responsivo
   - Listagem de heróis com paginação
   - Favoritar até 5 heróis
